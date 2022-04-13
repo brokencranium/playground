@@ -1,9 +1,7 @@
-import textwrap
+from itertools import combinations_with_replacement
 
-# S = input()
-# k = input()
 if __name__ == '__main__':
-    i =10
-    print("a".rjust(10), end="")
-    print("b".rjust(10), end="")
-    print()
+    A, B = input().split(" ")
+    [print("".join(i))  for i in combinations_with_replacement(sorted(A), int(B))]
+
+
